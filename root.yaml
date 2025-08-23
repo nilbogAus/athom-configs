@@ -1,0 +1,15 @@
+substitutions:
+  name: "3d-printer"
+  friendly_name: Smart Plug 57557a
+packages:
+  Athom Technology.Athom Without Relay Plug: github://athom-tech/athom-configs/athom-without-relay-plug.yaml
+esphome:
+  name: ${name}
+  name_add_mac_suffix: false
+  friendly_name: ${friendly_name}
+api:
+  encryption:
+    key: !secret 3d-printer_api_encryption_key
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password

@@ -1,7 +1,4 @@
 substitutions:
-  name: "athom-without-relay-plug"
-  friendly_name: "Smart Plug"
-  # Allows ESP device to be automatically lined to an 'Area' in Home Assistant. Typically used for areas such as 'Lounge Room', 'Kitchen' etc
   room: ""
   device_description: "athom esp8285 without relay plug"
   project_name: "Athom Technology.Athom Without Relay Plug"
@@ -71,9 +68,6 @@ wifi:
   domain: "${dns_domain}"
 
 captive_portal:
-
-dashboard_import:
-  package_import_url: github://athom-tech/athom-configs/athom-without-relay-plug.yaml
 
 # Dentra Components - Adds 'Platform - Energy Statistics'
 # https://github.com/dentra/esphome-components/tree/master/components/energy_statistics
