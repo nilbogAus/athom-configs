@@ -160,11 +160,14 @@ binary_sensor:
     id: power_button
     name: "Power Button"
     disabled_by_default: true
-    on_multi_click:
-      - timing:
-        - ON for at least 5s
-        then:
-          - switch.toggle: relay
+    on_double_click:
+      - switch.toggle: relay
+    on_click:
+      - light.turn_on:
+          id: blue_led
+          effect: "Strobe"
+      - delay: 10s
+      - light.turn_off: blue_led
 
 
 sensor:
@@ -340,6 +343,7 @@ light:
       number: GPIO13
     effects:
       - strobe:
+          name: "Strobe"
 
 
 text_sensor:
