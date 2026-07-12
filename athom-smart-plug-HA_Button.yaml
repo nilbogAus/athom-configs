@@ -338,7 +338,10 @@ light:
     pin:
       inverted: true
       number: GPIO13
-
+    effects:
+      - flicker:
+      - pulse:
+      
 text_sensor:
   - platform: wifi_info
     ip_address:
